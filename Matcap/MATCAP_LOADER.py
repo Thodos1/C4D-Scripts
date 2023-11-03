@@ -1,3 +1,14 @@
+"""
+Copyright (c) <2023> <Maksym Vysokolov>
+
+Website: cataclysm-vfx.com
+
+Description: 
+Execute and click on a MatCap image - create a material that works like a MatCap with selected image
+MatCap folder is dynamic so that you can add more matcaps.
+Tested on 200mb folder, works slower on initialize, but chugs through it.
+
+"""
 import os
 
 from collections import defaultdict
@@ -39,7 +50,7 @@ class TextureSetsDialog(gui.GeDialog):
 
         scroll_group = self.ScrollGroupBegin(10001, c4d.BFH_SCALEFIT | c4d.BFV_SCALEFIT, c4d.SCROLLGROUP_VERT, 0, 0)
         self.GroupBegin(scroll_group, flags=c4d.BFH_SCALEFIT | c4d.BFV_SCALEFIT, cols=5, rows=0)
-        #path = "G:\\PLUG_DEVELOPMENT\\OSL_SCRIPTS\\MATCAP\\1024\\6B3822_A65D48_824E48_401E0C.png"
+        
 
         bc: c4d.BaseContainer = c4d.BaseContainer()
         bc.SetBool(c4d.BITMAPBUTTON_BUTTON, True)
@@ -62,10 +73,9 @@ class TextureSetsDialog(gui.GeDialog):
 
             bmp_btn = self.AddCustomGui(4200+i, c4d.CUSTOMGUI_BITMAPBUTTON, "", c4d.BFH_SCALEFIT, 0, 0, bc)
             bmp_btn.SetImage(preview_texture, True)
-            #bmp_btn.SetInt32(c4d.BITMAPBUTTON_BORDER,c4d.BORDER_ACTIVE_2)
+            
 
-        #self.AddStaticText(100230, c4d.BFH_CENTER, name="Hello2eef2fefdsdsqawdasdsa")
-        #self.AddStaticText(10023, c4d.BFH_CENTER, name="Hello2eef2fefdsdsqawdasdsa")
+        
 
 
 
