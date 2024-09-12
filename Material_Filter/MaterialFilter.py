@@ -1,3 +1,15 @@
+"""
+    Project: C4D Material Filter
+    Author: Maksym Vysokolov
+    Email: contact@cataclysm-vfx.com
+    Date: 2024-08-07
+    Version: 1.0.0
+    License: GPL-3.0 License
+
+    Description: 
+    Filter materials from a keyword
+"""
+
 import c4d
 from c4d import gui
 
